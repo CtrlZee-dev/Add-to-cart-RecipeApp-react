@@ -5,7 +5,7 @@ export default function RecipeCard({recipe}) {
 
     return (
         <div>
-          
+        
                 <div className="recipeCard-container" key={recipe.id}>
                     <img className='recipeCard-img' src={recipe.image} alt="Recipe image" />
                     <button className='add-to-cart'>Add to Cart</button>
