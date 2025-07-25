@@ -1,13 +1,27 @@
 
-import RecipeCard from '../components/RecipeCard'
 import RecipeView from '../components/RecipeView'
 import DisplayRecipeList from '../components/DisplayRecipeList'
+import RecipesCart from '../components/RecipesCart'
+import Header from '../components/Header'
 import './App.css'
 import {  useState,useEffect } from 'react'
 
 function App() {
   const [recipesToDisplay, setRecipesToDisplay]= useState([]);
- // async fetch function
+  const [cartView, setCartView] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+
+const viewCart = () => {
+  setCartView(() => cartView ? false : true);
+};
+
+const addToCart = (recipe) => {
+  console.log("Adding to cart:", recipe);
+  setCartItems((prev) => [...prev, recipe]);
+};
+
+
+
   const fetchAllRecipes = async () => {
     try {
       const response = await fetch("https://dummyjson.com/recipes");
@@ -25,9 +39,14 @@ function App() {
  
 
   return (
-    <>
-    <DisplayRecipeList recipes={recipesToDisplay}  />
-    <RecipeView />
+    < >
+      <Header viewCart={viewCart}/>
+      <div className='app-container'>
+        <DisplayRecipeList recipes={recipesToDisplay}  addToCart={addToCart}  />
+        {cartView ? (<RecipesCart cartItems={cartItems} />) : null}
+    </div>
+
+ 
 
     </>
   )

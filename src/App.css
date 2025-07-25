@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+.app-container {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  gap: 2rem;
+
+}
 
 .logo {
   height: 6em;
@@ -17,6 +23,7 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
 
 @keyframes logo-spin {
   from {

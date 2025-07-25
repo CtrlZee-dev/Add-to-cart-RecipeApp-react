@@ -1,0 +1,32 @@
+.displayRecipeList-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .displayRecipeList-container {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+  .recipeCard-title {
+    font-size: 1.2rem;
+  }
+
+  .recipeCard-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .displayRecipeList-container {
+   grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  
+}
