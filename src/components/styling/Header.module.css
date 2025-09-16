@@ -1,0 +1,40 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerLogo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.headerTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cartButton {
+  background-color: #eed9c4;
+  border: 1px solid black;
+  color: black;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}

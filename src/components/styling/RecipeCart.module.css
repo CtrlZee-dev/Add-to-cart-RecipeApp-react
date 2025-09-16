@@ -1,0 +1,33 @@
+
+.cartContainer {
+  position: fixed;
+  top: 60px; /* adjust to header height */
+  right: 10px;
+  width: 700px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.checkoutBtn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #10B981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
